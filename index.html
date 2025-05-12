@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montrae Holland | Professional Writer</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a365d 0%, #2c5282 100%);
+            z-index: 1;
+        }
+        .content-overlay {
+            position: relative;
+            z-index: 2;
+        }
+        .timeline-item {
+            border-left: 2px solid #2c5282;
+            position: relative;
+            padding-left: 20px;
+            margin-left: 10px;
+            padding-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #2c5282;
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 0;
+        }
+        .expertise-card {
+            transition: all 0.3s ease;
+        }
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50" x-data="{ isOpen: false }">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-900 playfair">MH</div>
+                <button @click="isOpen = !isOpen" class="md:hidden">
+                    <i class="fas fa-bars text-blue-900"></i>
+                </button>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-blue-900 hover:text-blue-700">Home</a>
+                    <a href="#about" class="text-blue-900 hover:text-blue-700">About</a>
+                    <a href="#expertise" class="text-blue-900 hover:text-blue-700">Expertise</a>
+                    <a href="#experience" class="text-blue-900 hover:text-blue-700">Experience</a>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div id="particles-js"></div>
+        <div class="content-overlay text-center text-white px-6">
+            <h1 class="text-5xl md:text-6xl font-bold playfair animate__animated animate__fadeIn">
+                Montrae Holland
+            </h1>
+            <p class="text-xl md:text-2xl mt-4 animate__animated animate__fadeIn animate__delay-1s">
+                Professional Academic Writer & Research Consultant
+            </p>
+            <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-white text-blue-900 rounded-full hover:bg-blue-100 transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                Let's Collaborate
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-blue-900 playfair mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto text-gray-700 leading-relaxed">
+                <p class="mb-6">
+                    With over a decade of experience in academic writing, I've established myself as a trusted research consultant and writer. My approach combines meticulous research methodology with creative expression, ensuring each project meets the highest academic standards while maintaining engaging readability.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-900 mb-4">Education</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <span class="font-semibold">Master's degree</span><br>
+                                Creative Writing - Eastern Oregon University
+                            </li>
+                            <li>
+                                <span class="font-semibold">Bachelor's degree</span><br>
+                                Creative Expression in Writing - Stanford Summer Session
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-900 mb-4">Writing Styles</h3>
+                        <p>Proficient in all major academic writing styles:</p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="px-3 py-1 bg-blue-200 rounded-full text-blue-900">APA</span>
+                            <span class="px-3 py-1 bg-blue-200 rounded-full text-blue-900">MLA</span>
+                            <span class="px-3 py-1 bg-blue-200 rounded-full text-blue-900">ASA</span>
+                            <span class="px-3 py-1 bg-blue-200 rounded-full text-blue-900">Harvard</span>
+                            <span class="px-3 py-1 bg-blue-200 rounded-full text-blue-900">Chicago</span>
+                            <span class="px-3 py-1 bg-blue-200 rounded-full text-blue-900">OSCOLA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-blue-900 playfair mb-12">Areas of Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="expertise-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-900 text-3xl mb-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-3">Academic Writing</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Research Papers</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Custom Essays</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Term Papers</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Dissertations</li>
+                    </ul>
+                </div>
+                <div class="expertise-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-900 text-3xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-3">Research Services</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Research Proposals</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Literature Reviews</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Article Reviews</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Book Reports</li>
+                    </ul>
+                </div>
+                <div class="expertise-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-900 text-3xl mb-4">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-3">Digital Content</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>PowerPoint Presentations</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Online Courses</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Digital Articles</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Web Content</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-blue-900 playfair mb-12">Professional Journey</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-blue-900">Freelance Writer</h3>
+                    <p class="text-gray-600">Fiverr | 2024 - Present</p>
+                    <p class="mt-2 text-gray-700">Providing specialized writing services to global clients, focusing on academic and research-based content.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-blue-900">Academic Researcher and Essay Writer</h3>
+                    <p class="text-gray-600">Myfastessys.com | 2015 - 2023</p>
+                    <p class="mt-2 text-gray-700">Delivered high-quality academic content, maintaining excellence in research methodology and writing standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-blue-900 playfair mb-12">Let's Connect</h2>
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-gray-700 mb-8">Ready to collaborate on your next writing project? Get in touch with me through any of these channels:</p>
+                <div class="space-y-4">
+                    <a href="mailto:montraerondrellholland042@gmail.com" class="flex items-center justify-center space-x-3 text-blue-900 hover:text-blue-700">
+                        <i class="fas fa-envelope text-xl"></i>
+                        <span>montraerondrellholland042@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/montrae-rondrell-holland-b4b0b9365" target="_blank" class="flex items-center justify-center space-x-3 text-blue-900 hover:text-blue-700">
+                        <i class="fab fa-linkedin text-xl"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Montrae Holland. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
